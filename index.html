@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>
+        Comparison of 2022 and 2024 Satellite Imagery
+        of Kävlingeån Flooding
+    </title>
+
+</head>
+
+<body>
+
+    <h1>Kävlingeån Flooding Comparison</h1>
+
+    <table border="1">
+
+        <tr>
+            <th>Information about this website:</th>
+
+            <td>
+                This website is intended for residents in Revinge
+                to compare satellite imagery from 2022 and 2024,
+                showing how flooding may affect the surrounding
+                area and nearby homes.
+            </td>
+        </tr>
+
+        <tr>
+            <th>Right Side Image:</th>
+
+            <td>
+                Satellite imagery from 2022,
+                showing the area before the flooding.
+            </td>
+        </tr>
+
+        <tr>
+            <th>Left Side Image:</th>
+
+            <td>
+                Satellite imagery from 2024,
+                showing the area after the flooding.
+            </td>
+        </tr>
+		<tr> 
+			<th> Sources:</th> 
+			
+			<td> European Union, Copernicus Sentinel-2 data [2022,2024], OpenStreetMap</td>
+    </table>
+
+    <h2>Satellite Image Comparison</h2>
+
+    <p>
+        Drag the slider to compare satellite imagery
+        from 2022 and 2024. Add points, Lines, Polygons or Circles to mark flooded areas of the map. Use the dropdown menu to change geometry type.
+		<br>
+		Hold down the 'shift' key to activate freehand drawing. To remove the last point of a line or a polygon, press 'Undo'.
+    </p>
+	
+	
+
+    <div id="map" class= "map"></div>
+	<div class="row">
+      <div class="col-auto">
+        <span class="input-group">
+          <label class="input-group-text" for="type">Geometry type:</label>
+          <select class="form-select" id="type">
+            <option value="Point">Point</option>
+            <option value="LineString">Line</option>
+            <option value="Polygon">Polygon</option>
+            <option value="Circle">Circle</option>
+            <option value="None">None</option>
+          </select>
+          <input class="form-control" type="button" value="Undo" id="undo">
+        </span>
+      </div>
+    </div>
+
+    <input id = "swipe" type="range" min = "0" max = "100" value = "50" style= "width:100%">
+
+    <script type="module" src="./main.js"></script>
+
+</body>
+</html>
